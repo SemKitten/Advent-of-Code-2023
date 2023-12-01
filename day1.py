@@ -2,7 +2,6 @@ import regex as re
 
 with open ('input.txt') as f:
     lines = f.read().split()
-    lines = f.read().split()
 
 digit_words = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
