@@ -2,6 +2,7 @@ import regex as re
 
 with open ('input.txt') as f:
     lines = f.read().split()
+    lines = f.read().split()
 
 digit_words = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
@@ -10,11 +11,8 @@ def getNumbers (line):
         return str(digit_words.index(target)+1) if target in digit_words else target
 
     matches = re.findall(r'\d|'+'|'.join(digit_words), line, overlapped=True)
-    first_digit = matches[0]
-    last_digit = matches[-1]
-
-    first_digit = getDigit(first_digit)
-    last_digit = getDigit(last_digit)
+    first_digit = getDigit(matches[0])
+    last_digit = getDigit(matches[-1])
 
     return int(first_digit + last_digit)
 
