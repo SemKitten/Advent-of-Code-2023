@@ -33,7 +33,6 @@ sets = []
 
 for x in range(len(games)):
     sets = getNumbers(games[x])
-    print(sets)
     for y in range(len(sets[0])):
         redNumber = getDigit(sets[0][y], "red")
         redCheck = int(redNumber[0])
